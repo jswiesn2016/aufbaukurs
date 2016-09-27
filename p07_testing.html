@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="media/jasmine.css" rel="stylesheet" />
+
+    <script src="media/jasmine.js"></script>
+    <script src="media/jasmine-html.js"></script>
+    <script src="media/boot.js"></script>
+
+    <script src="u01_schnecken.js"></script>
+</head>
+<body>
+<script>
+    function isEverything(zahl) {
+        if (zahl === 42) {
+            return true;
+        }
+
+        return false;
+    }
+
+    function isReality(zahl) {
+        if (typeof zahl == 'undefined') {
+            return false;
+        }
+
+        if (typeof zahl == 'object') {
+            zahl = zahl[0];
+        }
+
+        if (isNaN(zahl)) {
+            zahl = Number(zahl);
+        }
+
+        if (zahl == 42 || zahl == 0x42 || zahl == '01010101') {
+            return true;
+        } else if (zahl == 666) {
+            return 'wtf';
+        }
+        else if (zahl == 11) {
+            return ['j', 'a'];
+        }
+
+        return false;
+    }
+</script>
+
+<script>
+    // Tests
+
+    describe('Testing isEverything function', function ()
+    {
+        var schnecke = new Schnecke('rudi', 'weinberg', 10);
+
+        it("schnecken name to be rudi", function () {
+           expect(schnecke.name).toBe('rudi');
+        });
+
+        it("max speed to be number", function () {
+            expect(typeof schnecke.maxGeschw).toBe('number');
+        });
+
+        it("max speed not to be number", function () {
+            schnecke.maxGeschw = null;
+            schnecke.krieche();
+
+
+        });
+
+
+    });
+
+
+</script>
+</body>
+</html>

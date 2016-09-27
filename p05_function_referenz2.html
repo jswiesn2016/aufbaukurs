@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function changeZahl() {
+        // Lokaler Variable
+        var zahl = 42;
+    }
+
+    // Globale Variable
+    var zahl = 11;
+
+    changeZahl();
+
+    document.write(zahl);
+
+    // Kopie der Variabeln
+    function changeWord(text) {
+        text = 'welt';
+    }
+
+
+    var text = 'hallo';
+
+    changeWord(text);
+
+    document.write('<hr />');
+    document.write(text);
+    document.write('<hr />');
+
+    // Referenz
+    function changeArray(namen) {
+        namen[1] = 'Bernd';
+    }
+
+
+    var namen = ['Maria', 'thomas', 'michael'];
+
+    changeArray(namen);
+
+    document.write(namen.join('; '));
+
+    document.write(typeof namen);
+
+    /**
+     *
+     * @param date as Reference!!
+     */
+    function changeDate(date) {
+        // Bla ist auch nur eine Referenz auf date!!
+        var bla = date;
+
+
+        bla.setMonth(2);
+    }
+    document.write('<hr />');
+
+    var date = new Date();
+
+    document.write(date);
+
+    changeDate(date);
+    document.write('<hr />');
+
+    document.write(date);
+
+</script>
+
+
+
+</body>
+</html>

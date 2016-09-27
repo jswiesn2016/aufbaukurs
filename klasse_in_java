@@ -1,0 +1,22 @@
+class Auto
+{
+    // Instanzvariabeln
+    public hersteller;
+
+    public modell;
+
+    public ps;
+
+    // Konstruktor
+    public Auto(String hersteller, String modell, int ps)
+    {
+        this.hersteller = hersteller;
+        // ...
+    }
+
+    // Methoden
+    public double fahren() {
+        return Math.random() * this.ps;
+    }
+
+}

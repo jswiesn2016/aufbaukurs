@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function printZahl(){
+        document.write(zahl);
+
+        zahl = 23;
+    }
+
+    // Kopie
+    function changeZahl(zahl){
+        zahl = 55;
+    }
+
+
+    var zahl = 42;
+
+    // Kommt drauf an wo die FUnktion aufgerufen wird
+    // 42
+    printZahl();
+
+    document.write('<hr />');
+
+    // 23
+    document.write(zahl);
+
+
+    changeZahl(zahl);
+
+    document.write('<hr />');
+
+    // ??
+    document.write(zahl);
+
+</script>
+
+
+
+</body>
+</html>

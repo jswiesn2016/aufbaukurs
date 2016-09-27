@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    if (true) {
+        // Hier definiert wurde
+        var test = 42;
+
+        // Nachfolger von var;
+        let lettest = 23;
+    }
+
+    document.write(lettest);
+
+    document.write(test);
+
+    for (var i = 0; i < 10; i++)
+    {
+        var test2 = 42 + i;
+    }
+
+    document.write('<br />');
+    document.write(test2);
+    document.write('<br />');
+
+    function getSinn() {
+        var sinn = 42;
+    };
+
+    getSinn();
+
+    document.write(getSinn());
+
+</script>
+</body>
+</html>
