@@ -10,4 +10,10 @@ Dateien des JavaScript Aufbaukurses
 - Prototype
 - Testing mit Jasmine
 
-Test
+### Tag 2
+
+- Git / GitHub
+- Testing
+- Anti-Patterns
+- Design Patterns
+- Ecma 6
