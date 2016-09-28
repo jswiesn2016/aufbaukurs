@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="media/jquery-3.1.1.min.js"></script>
+
+
+    <link href="media/jasmine.css" rel="stylesheet" />
+
+    <script src="media/jasmine.js"></script>
+    <script src="media/jasmine-html.js"></script>
+    <script src="media/boot.js"></script>
+</head>
+<body>
+<div id="sample">Test</div>
+
+<script>
+    $('#sample').css('background', 'red');
+    console.log($('#sample').css('background-color'));
+
+
+    $('#sample').hide(33000, function(){
+       // alert('fertig');
+    });
+
+    // $('#sample').show(500);
+
+    (function($) {
+
+        function test() {
+            return 42;
+        }
+
+        $('#sample').html(test());
+
+    })(jQuery);
+
+
+</script>
+<script>
+    describe('Testing jQuery', function ()
+    {
+        jasmine.clock().install();
+
+        it('Testing background color change', function(){
+            expect($('#sample').css('background-color')).toBe('rgb(255, 0, 0)');
+        });
+
+        it('Testing hide', function(){
+
+            setTimeout(function(){
+                expect($('#sample').css('display')).toBe('none');
+            }, 301);
+        });
+
+        it('Expeting sample to contain 42', function() {
+            expect(document.getElementById('sample').innerHTML).toBe('42');
+        })
+
+    });
+
+</script>
+
+</body>
+</html>
