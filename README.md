@@ -19,3 +19,4 @@ Dateien des JavaScript Aufbaukurses
 - Anti-Patterns
 - Design Patterns
 - Ecma 6
+

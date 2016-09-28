@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Fabrik - Rückgabe von neuen Klassen, Singletons; Daten etc.
+    var Fabric = function() {
+
+        var class2 = null;
+
+        var language = null;
+
+        // Singleton
+        this.getClass2 = function (){
+            if (class2 == null) {
+                class2 = new Class2();
+            }
+
+            return class2;
+        };
+
+        // String
+        this.getLanguage = function () {
+            if (language == null) {
+                // Lade language 1x
+                language = 'en';
+            }
+
+            return language;
+        }
+    };
+
+    Fabric.getClass1 = function (zahl){
+        return new Class1(zahl);
+    };
+
+
+    var Class1 = function(zahl) {
+        this.test = 42 + zahl;
+    };
+
+    var Class2 = function() {
+        this.test = 43;
+    };
+
+    var fab = new Fabric();
+
+    var cl1 = Fabric.getClass1(21);
+    var cl2 = fab.getClass2(21);
+
+    var lan = fab.getLanguage();
+
+
+</script>
+
+asdf
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var cssChangeObserver = function() {
+        this.change = function(context, element) {
+            if (context != 'css'){
+                return;
+            }
+
+            // Do something
+        }
+    };
+
+    var listener = [new cssChangeObserver()];
+
+    var triggerEvent = function (context, element) {
+        var results = [];
+
+        for(var i = 0; i < listener.length; i++)
+        {
+            var result = listener[i].change(context, element);
+
+            if (result) {
+                results.push(result);
+            }
+        }
+    };
+
+    var changeCss = function(element){
+        result = triggerEvent('css', element);
+
+
+        // Change css
+    };
+
+
+    changeCss();
+    changeCss();
+
+</script>
+
+asdf
+</body>
+</html>

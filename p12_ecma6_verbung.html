@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class BewegendesDing {
+
+        bewegen() {
+            return 0;
+        }
+    }
+
+    class Kfz {
+        constructor(ps){
+            this.ps = ps;
+        };
+
+        fahren() {
+            return this.ps * Math.random();
+        }
+
+        bewegen() {
+            return this.fahren();
+        }
+    }
+
+    class Auto extends Kfz {
+        constructor(ps) {
+            super(ps);
+        }
+    }
+
+    class Lkw extends Kfz {
+        constructor(ps){
+            super(ps / 8);
+        };
+
+        fahren() {
+            return super.fahren();
+        }
+    }
+
+    class Schnecke extends BewegendesDing{
+
+        krieche() {
+            return 10 * Math.random();
+        }
+
+        bewegen() {
+            return this.krieche();
+        }
+    }
+
+    let man = new Lkw(800);
+
+    let auto = new Auto(140);
+
+    console.log(man.bewegen());
+    console.log(auto.bewegen());
+
+    let rudi = new Schnecke();
+
+    console.log(rudi.bewegen());
+
+</script>
+</body>
+</html>

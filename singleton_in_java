@@ -1,0 +1,50 @@
+class Auto
+{
+    public static Auto instance = null;
+
+    // Instanzvariabeln
+    public hersteller;
+
+    public static modell;
+
+    public ps;
+
+    // Konstruktor
+    private Auto(String hersteller, String modell, int ps)
+    {
+        this.hersteller = hersteller;
+        // ...
+    }
+
+    // Methoden
+    public double fahren() {
+        return Math.random() * this.ps;
+    }
+
+    public static test(int test, String modell) {
+
+        return this.modell;
+        return 42;
+    }
+
+    public static getInstance(String daten) {
+        if (self::instance == null) {
+            self::instance = new Auto(date);
+        }
+
+        return self::instance;
+    }
+}
+
+// Auto bmw = new Auto("bmw", "a3", 120);
+
+bmw.test();
+
+// Auto audi = new Auto("Aud", "6", 130);
+
+
+Auto.test();
+
+audi = Auto.getInstance(daten);
+
+audi.fahren();

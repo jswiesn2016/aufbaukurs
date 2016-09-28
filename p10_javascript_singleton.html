@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var Point = function(x, y) {
+        this.windowHeight = 0;
+        this.x = x;
+        this.y = y;
+
+        this.sampleFunction = function() {
+            document.write('bla' + this.windowHeight);
+        }
+    };
+
+    Point.instance = null;
+
+    // Singleton -> Helper
+    Point.getInstance = function() {
+
+        if (Point.instance == null){
+            Point.instance = new Point(3, 4);
+            Point.windowHeight = window.innerHeight;
+        }
+
+        return Point.instance
+    };
+
+    var p1 = Point.getInstance();
+
+    var p2 = Point.getInstance();
+
+    p1.x = 23;
+
+    console.log(p1);
+    console.log(p2);
+
+</script>
+
+asdf
+</body>
+</html>

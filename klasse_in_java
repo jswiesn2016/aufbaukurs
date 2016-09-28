@@ -1,11 +1,9 @@
 class Auto
 {
     // Instanzvariabeln
-    public hersteller;
+    private hersteller;
 
     public modell;
-
-    public ps;
 
     // Konstruktor
     public Auto(String hersteller, String modell, int ps)
@@ -19,4 +17,13 @@ class Auto
         return Math.random() * this.ps;
     }
 
+    public setPs(ps) {
+        if (ps > 10000) {
+            // Fehler!!
+        }
+
+        this.kw = ps * 0.4;
+    }
 }
+
+Auto.ps = 999099999;
