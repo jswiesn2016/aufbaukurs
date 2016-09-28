@@ -14,6 +14,8 @@ Dateien des JavaScript Aufbaukurses
 
 - Git / GitHub
 - Testing
+- System tests
+- Automated tests
 - Anti-Patterns
 - Design Patterns
 - Ecma 6
