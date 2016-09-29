@@ -1,0 +1,16 @@
+<div *ngIf="kitten">
+    <hr/>
+    <h3>Edit Kitten</h3>
+
+    Kitten {{kitten.name}}
+
+    <div>
+        <label>Bild</label>
+        <input [(ngModel)]="kitten.name">
+    </div>
+
+    <div>
+        <label>Bild:</label>
+        <input [(ngModel)]="kitten.bild">
+    </div>
+</div>

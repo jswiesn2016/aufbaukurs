@@ -54,6 +54,20 @@
         }
     }
 
+    class Bla {
+        private constructor(){
+        }
+
+        static construct() {
+            return new Bla();
+        }
+    }
+
+    var bla = Bla.construct();
+
+
+    var test = new Bla();
+
     let man = new Lkw(800);
 
     let auto = new Auto(140);

@@ -1,0 +1,36 @@
+<h3>Hallo Template</h3>
+
+<div *ngIf="errors.length > 0; let i = index">
+    <div *ngFor="let error of errors">
+        {{error}} <button (click)="errors.splice(i, 1)">X</button>
+    </div>
+</div>
+
+{{ueberschrift}}
+
+<div [hidden]="!isVisible">
+    Ist sichtbar
+</div>
+
+<button (click)="isVisible = !isVisible">Toggle State</button>
+
+<input [(ngModel)]="ueberschrift">
+
+<div>
+    <!-- For each Schleife -->
+    <div *ngFor="let name of namen; let i=index">
+        <div (click)="selectName(i)">{{name}}
+
+            <button (click)="deleteName(i)">X</button>
+        </div>
+
+    </div>
+</div>
+
+<input type="text" #name placeholder="Name" [(ngModel)]="namen[selectedName]" />
+
+<button (click)="addName(name.value)">Add</button>
+<button (click)="selectedName = -1">Clear</button>
+
+<hr />
+<kitten>Loading kittens</kitten>

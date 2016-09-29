@@ -1,0 +1,27 @@
+<h3>Think on the Kittens!</h3>
+
+<div class="row">
+    <div *ngFor="let kitten of kittens"
+        (click)="selectKitten(kitten)"
+         [class]="selectedKitten == kitten ? 'selectedKitten col-md-4 col-sm-6 col-xs-12' : 'col-md-4 col-sm-6 col-xs-12'"
+        >
+        <img src="{{kitten.bild}}" class="img-responsive" />
+        <div>
+            {{kitten.name}}
+        </div>
+    </div>
+</div>
+
+<div class="alert alert-info">
+<button class="btn btn-default" (click)="addKitten()">Add</button>
+</div>
+
+
+<kitten-edit [selectedKitten]="selectedKitten"></kitten-edit>
+
+<style>
+    .selectedKitten {
+        border: 1px solid #8a4182;
+        background: #ccc;
+    }
+</style>
